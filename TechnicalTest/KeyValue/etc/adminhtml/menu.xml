@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="TechnicalTest_KeyValue::parent" title="TechnicalTest module" module="TechnicalTest_KeyValue" sortOrder="100" parent="Magento_Backend::content" resource="TechnicalTest_KeyValue::parent"/>
+		<add id="TechnicalTest_KeyValue::keyvalue" title="KeyValue" module="TechnicalTest_KeyValue" sortOrder="20" parent="TechnicalTest_KeyValue::parent" action="keyvalue/keyvalue" resource="TechnicalTest_KeyValue::keyvalue"/>
+
+    </menu>
+</config>

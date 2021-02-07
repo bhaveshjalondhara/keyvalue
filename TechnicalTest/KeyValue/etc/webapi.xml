@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../app/code/Magento/Webapi/etc/webapi.xsd">
+    <route url="/V1/keyvalue" method="GET">
+        <service class="TechnicalTest\KeyValue\Api\Keyvalue" method="getAllData"/>
+        <resources>
+            <resource ref="admin"/>
+        </resources>
+    </route>
+    <route url="/V1/keyvalue/:code" method="GET">
+        <service class="TechnicalTest\KeyValue\Api\Keyvalue" method="getByCodeData"/>
+        <resources>
+            <resource ref="admin"/>
+        </resources>
+    </route>
+    <route url="/V1/keyvalue/delete/:code" method="GET">
+        <service class="TechnicalTest\KeyValue\Api\Keyvalue" method="deleteData"/>
+        <resources>
+            <resource ref="admin"/>
+        </resources>
+    </route>
+    <route url="/V1/keyvalue/delete/:code" method="GET">
+        <service class="TechnicalTest\KeyValue\Api\Keyvalue" method="deleteData"/>
+        <resources>
+            <resource ref="admin"/>
+        </resources>
+    </route>
+    <route url="/V1/keyvalue/update" method="POST">
+        <service class="TechnicalTest\KeyValue\Api\UpdateKeyValueInterface" method="update"/>
+        <resources>
+          <resource ref="admin"/>
+        </resources>
+    </route>
+</routes>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="keyvalue_keyvalue_listing_data_source" xsi:type="string">TechnicalTest\KeyValue\Model\ResourceModel\Keyvalue\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="TechnicalTest\KeyValue\Model\ResourceModel\Keyvalue\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">keyvalue</argument>
+            <argument name="resourceModel" xsi:type="string">TechnicalTest\KeyValue\Model\ResourceModel\Keyvalue</argument>
+        </arguments>
+    </virtualType>
+    <preference for="TechnicalTest\KeyValue\Api\Keyvalue" type="TechnicalTest\KeyValue\Model\Data\Keyvalue" />
+    <preference for="TechnicalTest\KeyValue\Api\Data\UpdateKeyValueInterface" type="TechnicalTest\KeyValue\Model\Data\UpdateKeyValueData"/>
+    <preference for="TechnicalTest\KeyValue\Api\UpdateKeyValueInterface" type="TechnicalTest\KeyValue\Model\Data\UpdateKeyValue"/>
+</config>
